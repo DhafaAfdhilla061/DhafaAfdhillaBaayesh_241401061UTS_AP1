@@ -1,0 +1,14 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+    double N;
+    cout<<"Masukkan kode :"; cin>>N;
+    double pangkat = log(N)/log(2);
+    double verifikasi = fmod(pangkat,1.0);
+    if (verifikasi==0){
+        cout<<"Selamat, batu telah terbuka";
+    }else{
+        cout<<"Kode salah, mohon ulang lagi";
+    }
+}
