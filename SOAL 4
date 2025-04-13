@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main(){
+    string mantra;
+    int i,vokal=0;
+    cout<<"Masukkan Mantra: "; cin>>mantra;
+    for(i=0;i<mantra.length();i++){
+        if((mantra[i]=='A')||(mantra[i]=='a')||(mantra[i]=='I')||(mantra[i]=='i')||(mantra[i]=='U')||(mantra[i]=='u')||(mantra[i]=='E')||(mantra[i]=='e')||(mantra[i]=='O')||(mantra[i]=='o')){
+            vokal+=1;
+        }
+    }
+    if(vokal>0){
+        cout<<"Kekuatan mantra: "<<vokal<<" vokal.";
+    }else{
+        cout<<"Mantra tidak valid! Tidak mengandung vokal.";
+    }
+}
