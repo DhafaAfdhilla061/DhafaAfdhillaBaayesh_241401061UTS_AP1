@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main(){
+    string nama,nim;
+    int nm1,nm2,nm3;
+    float rata;
+    cout<<"Nama Mahasiswa: "; getline(cin,nama);
+    cout<<"NIM: "; cin>>nim;
+    cout<<"Nilai Mata Kuliah: "<<endl;
+    cout<<"Algoritma dan Pemrograman: "; cin>>nm1;
+    cout<<"Probabilitas dan Statistika: "; cin>>nm2;
+    cout<<"Sistem Operasi: "; cin>>nm3;
+    rata=float(nm1+nm2+nm3)/3;
+    if ((nm1<60)&&(nm1>=0)){
+        cout<<"Algoritma dan Pemrograman: Tidak Lulus. Silakan Ulangi di Tahun Depan!"<<endl;
+    }else if((nm1>=60)&&(nm1>=0)){
+        cout<<"Algoritma dan Pemrograman: Lulus."<<endl;
+    }
+    if ((nm2<60)&&(nm2>=0)){
+        cout<<"Probabilitas dan Statistika: Tidak Lulus. Silakan Ulangi di Tahun Depan!"<<endl;
+    }else if((nm2>=60)&&(nm2>=0)){
+        cout<<"Probabilitas dan Statistika: Lulus."<<endl;
+    }
+    if ((nm3<60)&&(nm3>=0)){
+        cout<<"Sistem Operasi: Tidak Lulus. Silakan Ulangi di Tahun Depan!"<<endl;
+    }else if((nm3>=60)&&(nm3>=0)){
+        cout<<"Sistem Operasi: Lulus."<<endl;
+    }
+    cout.precision(3);
+    cout<<"Nilai Rata-rata Semester ini: "<<rata;
+}
