@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int i,j,jumlah=0,a;
+    string kode;
+    cout<<"Input kode biner : "; cin>>kode;
+    for(i=0;i<kode.length();i++){
+        if(kode[i]=='0'||kode[i]=='1'){
+            continue;
+        }else{
+            cout<<"Pesan rusak!";
+            return 0;
+        }
+    }
+    for(i=0;i<kode.length();i++){
+        a=kode[i]-'0';
+        if (kode[i]=='1'){
+        for(j=i;j<kode.length()-1;j++){
+            a*=2;
+        }
+    }jumlah+=a;
+    }
+    cout<<"Angka desimal dari biner "<<kode<<" adalah = "<<jumlah<<endl;
+}
